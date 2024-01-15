@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu carrinho</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <div id="containerMensagens" class="container-mensagens">
+
+    </div>
+
+    <div class="modal-full animated backInUp" id="modalCarrinho">
+        <div class="m-header container">
+            <a href="index.html" class="btn btn-white btn-sm float-right" onclick="cardapio.metodos.toggleModalCarrinho(false)">Fechar</a>
+            <div class="etapas">
+                <div class="etapa etapa1 active">1</div>
+                <div class="etapa etapa2">2</div>
+                <div class="etapa etapa3">3</div>
+            </div>
+            <p class="title-carrinho mt-4">
+                <b id="lblTituloEtapa">Seu carrinho:</b>
+            </p>
+        </div>
+    
+        <div class="m-body">
+            <div class="container">
+                <div id="itensCarrinho" class="row mr-0 ml-0 animated fadeIn">
+                
+                </div>
+    
+                <div id="localEntrega" class="row mr-0 ml-0 hidden animated fadeIn">
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">CEP:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-cep">
+                                <input id="txtCEP" name="cep" type="number" min="8" max="8" class="form-control" />
+                            </div>
+                            <a id="iconCep" class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="col-8 no-mobile"></div>
+    
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">Endereço:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-endereco" class="loading-wrapper">
+                                <input id="txtEndereco" class="form-control" required />
+                                <div class="loading-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">Bairro:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-bairro" class="loading-wrapper">
+                                <input id="txtBairro" class="form-control"  required/>
+                                <div class="loading-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">Número:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-numero">
+                                <input id="txtNumero" class="form-control"  required/>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">Cidade:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-cidade" class="loading-wrapper">
+                                <input id="txtCidade" class="form-control"  required/>
+                                
+                            </div>                  
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">Complemento:</label>
+                            <input id="txtComplemento" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label for="cep">UF:</label>
+                            <span class="asterisk">*</span>
+                            <div id="error-uf" class="loading-wrapper">
+                                <select name="" id="ddlUf" class="form-control"  required>
+                                    <option value="-1">...</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </div>
+                            <div class="loading-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn">
+                    <div class="col-12">
+                        <p class="title-carrinho mt-4">
+                            <b>Itens do pedido:</b>
+                        </p>
+                    </div>
+    
+                    <div class="col-12">
+                        <div id="listaItensResumo" class="row">
+                            
+                        </div>
+                    </div>
+    
+                    <div class="col-12">
+                        <p class="title-carrinho-entrega">
+                            <b>Local de entrega:</b>
+                        </p>
+                    </div>
+    
+                    <div class="col-12 item-carrinho resumo">
+                        <div class="img-map">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="dados-produto">
+                            <p class="title-produto-resumo"><b id="resumoEndereco"></b></p>
+                            <p class="description-entrega-resumo" id="cidadeEndereco"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="m-footer">
+            <div class="container">
+                <div id="subTotal" class="container-total text-right mb-4">
+                    <p class="mb-0">
+                        <span>Subtotal:</span>
+                        <span id="lblSubTotal">R$ \${preco}</span>
+                    </p>
+                    <p class="mb-0 texto-entrega">
+                        <span><i class="fas fa-motorcycle"></i> Entrega:</span>
+                        <span id="lblValorEntrega">+ R$ 5,00</span>
+                    </p>
+                    <p class="mb-0 texto-total">
+                        <span><b>Total:</b></span>
+                        <span class="valor-total"><b id="lblTotal">R$ \${total}</b></span>
+                    </p>
+                </div>
+    
+                <a class="btn btn-yellow float-right" id="btnEtapaPedido" onclick="cardapio.metodos.carregarEndereco()">Continuar</a>
+                <a class="btn btn-yellow float-right hidden" id="btnEtapaEndereco" onclick="cardapio.metodos.resumoPedido()">Revisar pedido</a>
+                <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" onclick="cardapio.metodos.finalizarPedido()" target="_blank">Enviar Pedido</a>
+                <a class="btn btn-white float-right mr-3 hidden" id="btnVoltar" onclick="cardapio.metodos.voltarEtapa()">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/dados.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            cardapio.metodos.loadItensCarrinho();
+        });
+    </script>
+
+    <script>new WOW().init();</script>
+</body>
+</html>
