@@ -1,18 +1,18 @@
 # Cardápio Online com WhatsApp
 
-Explore nosso repositório GitHub para descobrir um cardápio online incrível feito com HTML, CSS e Javascript. Destacamos alguns recursos que tornam este projeto especial:
+Este projeto consiste em um sofisticado cardápio online desenvolvido utilizando HTML, CSS e Javascript. Destaca-se pela integração que permite o envio de pedidos diretos pelo WhatsApp. Esta solução proporciona uma experiência eficiente e moderna para restaurantes que buscam otimizar o processo de pedidos online.
 
-## Recursos
+## Funcionalidades
 
-1. **Responsividade Total:** O cardápio se adapta perfeitamente a qualquer dispositivo - do celular ao computador.
+1. **Responsividade:** O cardápio se adapta a qualquer dispositivo - do celular ao computador.
 
-2. **Integração WhatsApp:** Facilite os pedidos! Os clientes podem enviar pedidos instantâneos pelo WhatsApp.
+2. **Integração com WhatsApp:** Mais agilidade nos pedidos! Os clientes podem enviar pedidos instantâneos pelo WhatsApp.
 
 3. **Design Amigável:** Navegação fácil, layout organizado e interações suaves para uma experiência do usuário agradável.
 
-4. **Animações Leves:** Adicionamos animações sutis para tornar a experiência mais atraente.
+4. **Animações Leves:** Animações sutis e sofisticadas para tornar a experiência mais atraente.
 
-5. **Estilo Moderno:** Design bonito, suave e moderno para destacar seu negócio online.
+5. **Estilo Moderno:** Design bonito, suave e moderno para tornar o site mais profissional.
 
 ## Como Usar
 
