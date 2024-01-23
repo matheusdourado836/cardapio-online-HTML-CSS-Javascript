@@ -24,5 +24,3 @@ Este projeto consiste em um sofisticado cardápio online desenvolvido utilizando
 
 - Fique à vontade para sugerir melhorias ou relatar problemas na seção de "Issues".
 - Colabore para aprimorar este projeto.
-
-Obrigado por conferir! Esperamos que este cardápio online torne seu negócio ainda mais acessível e atraente.
